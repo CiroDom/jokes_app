@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Joker App</string>
+
+    <string name="menu_home">Início</string>
+    <string name="menu_day_joke">Piada do Dia</string>
+    <string name="menu_about">Sobre</string>
+
+    <string name="social">Social</string>
+</resources>

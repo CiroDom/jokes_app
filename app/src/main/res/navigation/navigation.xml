@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment android:id="@+id/nav_home"
+        android:name="co.tiagoaguiar.tutorial.jokerappdev.classes.frags.HomeFrag"
+        android:label="@string/menu_home"
+        tools:layout="@layout/frag_home"/>
+
+    <fragment android:id="@+id/nav_day_joke"
+        android:name="co.tiagoaguiar.tutorial.jokerappdev.classes.frags.DayJokeFrag"
+        android:label="@string/menu_day_joke"
+        tools:layout="@layout/frag_day_joke"/>
+
+    <fragment android:id="@+id/nav_about"
+        android:name="co.tiagoaguiar.tutorial.jokerappdev.classes.frags.AboutFrag"
+        android:label="@string/menu_about"
+        tools:layout="@layout/frag_about"/>
+
+</navigation>
