@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.jokerappdev.classes.frags
+package co.tiagoaguiar.tutorial.jokerappdev.frags
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import co.tiagoaguiar.tutorial.jokerappdev.R
 
-class HomeFrag : Fragment() {
+class AboutFrag : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.frag_home, container, false)
+        return inflater.inflate(R.layout.frag_about, container, false)
     }
 }

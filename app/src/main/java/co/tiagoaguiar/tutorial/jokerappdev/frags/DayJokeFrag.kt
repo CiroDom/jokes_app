@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.jokerappdev.classes.frags
+package co.tiagoaguiar.tutorial.jokerappdev.frags
 
 import android.os.Bundle
 import android.view.LayoutInflater

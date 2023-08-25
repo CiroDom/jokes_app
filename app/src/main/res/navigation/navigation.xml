@@ -6,17 +6,17 @@
     app:startDestination="@id/nav_home">
 
     <fragment android:id="@+id/nav_home"
-        android:name="co.tiagoaguiar.tutorial.jokerappdev.classes.frags.HomeFrag"
+        android:name="co.tiagoaguiar.tutorial.jokerappdev.frags.frags.HomeFrag"
         android:label="@string/menu_home"
         tools:layout="@layout/frag_home"/>
 
     <fragment android:id="@+id/nav_day_joke"
-        android:name="co.tiagoaguiar.tutorial.jokerappdev.classes.frags.DayJokeFrag"
+        android:name="co.tiagoaguiar.tutorial.jokerappdev.frags.frags.DayJokeFrag"
         android:label="@string/menu_day_joke"
         tools:layout="@layout/frag_day_joke"/>
 
     <fragment android:id="@+id/nav_about"
-        android:name="co.tiagoaguiar.tutorial.jokerappdev.classes.frags.AboutFrag"
+        android:name="co.tiagoaguiar.tutorial.jokerappdev.frags.frags.AboutFrag"
         android:label="@string/menu_about"
         tools:layout="@layout/frag_about"/>
 
