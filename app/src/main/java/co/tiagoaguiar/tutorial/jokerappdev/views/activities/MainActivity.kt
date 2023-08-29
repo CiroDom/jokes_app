@@ -1,8 +1,8 @@
-package co.tiagoaguiar.tutorial.jokerappdev.activities
+package co.tiagoaguiar.tutorial.jokerappdev.views.activities
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
+    installSplashScreen()
+
     setContentView(binding.root)
 
     val toolbar = binding.mainArea.appbarLayout.toolbar

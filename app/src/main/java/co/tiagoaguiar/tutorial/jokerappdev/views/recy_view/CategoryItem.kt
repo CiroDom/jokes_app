@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.jokerappdev.recy_view
+package co.tiagoaguiar.tutorial.jokerappdev.views.recy_view
 
 import android.view.View
 import android.widget.LinearLayout
