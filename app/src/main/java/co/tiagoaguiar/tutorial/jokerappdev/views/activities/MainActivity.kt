@@ -15,7 +15,9 @@ class MainActivity : AppCompatActivity() {
   private val binding by lazy {
     ActivityMainBinding.inflate(layoutInflater)
   }
-  private val navController = findNavController(R.id.frag_host_main_content)
+  private val navController by lazy {
+    findNavController(R.id.frag_host_main_content)
+  }
   private lateinit var appBarConfig: AppBarConfiguration
 
   override fun onCreate(savedInstanceState: Bundle?) {

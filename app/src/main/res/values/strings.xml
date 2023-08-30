@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Joker App</string>
+    <string name="app_name">Jokes App</string>
 
     <string name="menu_home">Início</string>
     <string name="menu_day_joke">Piada do Dia</string>

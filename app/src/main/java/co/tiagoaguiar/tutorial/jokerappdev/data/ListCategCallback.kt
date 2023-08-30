@@ -4,7 +4,7 @@ interface ListCategCallback {
 
     fun onSucess(response: List<String>)
 
-    fun onFailure(response: String)
+    fun onError(response: String)
 
     fun onComplete()
 

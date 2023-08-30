@@ -1,5 +1,6 @@
 package co.tiagoaguiar.tutorial.jokerappdev.presenter
 
+import android.graphics.Color
 import co.tiagoaguiar.tutorial.jokerappdev.data.CategRemoteDataSource
 import co.tiagoaguiar.tutorial.jokerappdev.data.ListCategCallback
 import co.tiagoaguiar.tutorial.jokerappdev.models.Category
@@ -11,12 +12,24 @@ class HomePresenter(
     ) : ListCategCallback{
 
     override fun onSucess(response: List<String>) {
-        val categories = response.map { category -> Category(category, 0xFFFF0000) }
+        val colorStart = 239
+        val colorEnd = 40
+        val grad = (colorStart - colorEnd) / response.size
+
+        val categories = response.mapIndexed { index, string ->
+            val hsv = floatArrayOf(
+                colorStart - (grad * index).toFloat(),
+                100.0f,
+                100.0f,
+            )
+
+            Category(string, Color.HSVToColor(hsv).toLong())
+        }
 
         view.showCategs(categories)
     }
 
-    override fun onFailure(messege: String) {
+    override fun onError(messege: String) {
         view.showFailure(messege)
     }
 
