@@ -12,9 +12,7 @@ class CategoryItem(private val category: Category) : Item<CategoryItem.CategoryV
 
     inner class CategoryVHolder(itemView: View) : GroupieViewHolder(itemView)
 
-    override fun createViewHolder(itemView: View): CategoryVHolder {
-        return CategoryVHolder(itemView)
-    }
+    override fun createViewHolder(itemView: View) = CategoryVHolder(itemView)
 
     override fun bind(holder: CategoryVHolder, position: Int) {
         val itemView = holder.itemView
@@ -23,6 +21,6 @@ class CategoryItem(private val category: Category) : Item<CategoryItem.CategoryV
         itemView.findViewById<LinearLayout>(R.id.category_container).setBackgroundColor(category.backGroundColor.toInt())
     }
 
-    override fun getLayout(): Int = R.layout.category_item
+    override fun getLayout() = R.layout.category_item
 
 }

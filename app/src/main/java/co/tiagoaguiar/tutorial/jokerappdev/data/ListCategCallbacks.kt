@@ -1,6 +1,6 @@
 package co.tiagoaguiar.tutorial.jokerappdev.data
 
-interface ListCategCallback {
+interface ListCategCallbacks {
 
     fun onSucess(response: List<String>)
 

@@ -2,14 +2,14 @@ package co.tiagoaguiar.tutorial.jokerappdev.presenter
 
 import android.graphics.Color
 import co.tiagoaguiar.tutorial.jokerappdev.data.CategRemoteDataSource
-import co.tiagoaguiar.tutorial.jokerappdev.data.ListCategCallback
+import co.tiagoaguiar.tutorial.jokerappdev.data.ListCategCallbacks
 import co.tiagoaguiar.tutorial.jokerappdev.models.Category
 import co.tiagoaguiar.tutorial.jokerappdev.views.frags.HomeFrag
 
 class HomePresenter(
     private val view: HomeFrag,
     private val dataSource: CategRemoteDataSource = CategRemoteDataSource(),
-    ) : ListCategCallback{
+    ) : ListCategCallbacks{
 
     override fun onSucess(response: List<String>) {
         val colorStart = 239

@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.tiagoaguiar.tutorial.jokerappdev.R
-import co.tiagoaguiar.tutorial.jokerappdev.data.CategRemoteDataSource
 import co.tiagoaguiar.tutorial.jokerappdev.databinding.FragHomeBinding
 import co.tiagoaguiar.tutorial.jokerappdev.models.Category
 import co.tiagoaguiar.tutorial.jokerappdev.presenter.HomePresenter
@@ -34,7 +33,7 @@ class HomeFrag : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.frag_home, container, false) /** USAR BINDNING DEPOIS*/
+        return inflater.inflate(R.layout.frag_home, container, false)
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
