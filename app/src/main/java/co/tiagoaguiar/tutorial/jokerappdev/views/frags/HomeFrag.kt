@@ -33,7 +33,7 @@ class HomeFrag : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.frag_home, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
@@ -42,12 +42,18 @@ class HomeFrag : Fragment() {
         val recyView = binding.rvMain
         recyView.layoutManager = LinearLayoutManager(requireContext())
 
-        presenter.findAllCategs()
+        if (groupieAdapter.itemCount == 0) {
+            presenter.findAllCategs()
+        }
 
         recyView.adapter = groupieAdapter
 
         groupieAdapter.setOnItemClickListener{ item, view ->
-            findNavController().navigate(R.id.action_nav_home_to_nav_joke)
+            val bundle = Bundle()
+            val categName = (item as CategoryItem).category.name
+            bundle.putString(JokeFrag.CATEG_KEY, categName)
+
+            findNavController().navigate(R.id.action_nav_home_to_nav_joke, bundle)
         }
     }
 

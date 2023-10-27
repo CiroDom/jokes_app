@@ -8,7 +8,7 @@ import com.google.android.material.textview.MaterialTextView
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 
-class CategoryItem(private val category: Category) : Item<CategoryItem.CategoryVHolder>() {
+class CategoryItem(val category: Category) : Item<CategoryItem.CategoryVHolder>() {
 
     inner class CategoryVHolder(itemView: View) : GroupieViewHolder(itemView)
 
