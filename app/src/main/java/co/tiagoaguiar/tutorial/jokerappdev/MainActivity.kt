@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     appBarConfig = AppBarConfiguration(
       setOf(
-        R.id.nav_home, R.id.nav_day_joke, R.id.nav_about
+        R.id.nav_home, R.id.nav_random_joke, R.id.nav_about
       ),
       drawerLayout
     )

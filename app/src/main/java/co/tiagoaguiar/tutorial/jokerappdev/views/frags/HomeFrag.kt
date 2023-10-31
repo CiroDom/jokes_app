@@ -40,7 +40,7 @@ class HomeFrag : Fragment() {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
 
-        activity?.findViewById<Toolbar>(R.id.toolbar)?.title = getString(R.string.app_name)
+        activity?.findViewById<Toolbar>(R.id.toolbar)?.title = getString(R.string.home)
 
         val recyView = binding.rvMain
         recyView.layoutManager = LinearLayoutManager(requireContext())

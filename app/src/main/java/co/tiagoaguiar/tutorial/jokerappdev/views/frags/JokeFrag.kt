@@ -56,7 +56,8 @@ class JokeFrag : Fragment() {
         if (arguments != null) {
             val categName = arguments?.getString(CATEG_KEY)!!
 
-            activity?.findViewById<Toolbar>(R.id.toolbar)?.title = categName
+            activity?.findViewById<Toolbar>(R.id.toolbar)?.title =
+                categName.replaceFirstChar { it.uppercaseChar() }
 
             fab.setOnClickListener {
                 presenter.findByCateg(categName)
@@ -66,6 +67,8 @@ class JokeFrag : Fragment() {
             presenter.findByCateg(categName)
             Log.i("categJoke", "normal - findcategJoke")
         } else {
+            activity?.findViewById<Toolbar>(R.id.toolbar)?.title = getString(R.string.random_joke)
+
             fab.setOnClickListener {
                 presenter.findDayJoke()
                 Log.i("dayJoke", "fab - findDayJoke")
