@@ -1,17 +1,18 @@
 package co.tiagoaguiar.tutorial.jokerappdev.presenter
 
 import android.graphics.Color
-import co.tiagoaguiar.tutorial.jokerappdev.data.CategRemoteDataSource
-import co.tiagoaguiar.tutorial.jokerappdev.data.ListCategCallbacks
+import co.tiagoaguiar.tutorial.jokerappdev.data.remote_data_sources.CategRemoteDataSource
+import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.OurCallbacks
 import co.tiagoaguiar.tutorial.jokerappdev.models.Category
+import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
 import co.tiagoaguiar.tutorial.jokerappdev.views.frags.HomeFrag
 
 class HomePresenter(
     private val view: HomeFrag,
     private val dataSource: CategRemoteDataSource = CategRemoteDataSource(),
-    ) : ListCategCallbacks{
+    ) : OurCallbacks {
 
-    override fun onSucess(response: List<String>) {
+    override fun onSucessCateg(response: List<String>) {
         val colorStart = 239
         val colorEnd = 40
         val grad = (colorStart - colorEnd) / response.size
@@ -27,6 +28,10 @@ class HomePresenter(
         }
 
         view.showCategs(categories)
+    }
+
+    override fun onSucessDayJoke(response: Joke) {
+        /** nothing to do here */
     }
 
     override fun onError(messege: String) {

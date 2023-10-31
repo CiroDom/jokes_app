@@ -1,7 +1,7 @@
 package co.tiagoaguiar.tutorial.jokerappdev.presenter
 
-import co.tiagoaguiar.tutorial.jokerappdev.data.JokeCallback
-import co.tiagoaguiar.tutorial.jokerappdev.data.JokeRemoteDataSource
+import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.JokeCallback
+import co.tiagoaguiar.tutorial.jokerappdev.data.remote_data_sources.JokeRemoteDataSource
 import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
 import co.tiagoaguiar.tutorial.jokerappdev.views.frags.JokeFrag
 
@@ -25,6 +25,11 @@ class JokePresenter(
     fun findByCateg(categName: String) {
         view.showProgBar()
         dataSource.findByCateg(categName, this)
+    }
+
+    fun findDayJoke() {
+        view.showProgBar()
+        dataSource.findDayJoke(this)
     }
 
 }

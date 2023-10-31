@@ -1,13 +1,16 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data
+package co.tiagoaguiar.tutorial.jokerappdev.data.remote_data_sources
 
 import android.util.Log
+import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.ChuckNorrisApi
+import co.tiagoaguiar.tutorial.jokerappdev.data.http_singleton.HttpClient
+import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.OurCallbacks
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class CategRemoteDataSource {
 
-    fun findAllCategs(callback: ListCategCallbacks) {
+    fun findAllCategs(callback: OurCallbacks) {
         HttpClient.buildRetrofit()
             .create(ChuckNorrisApi::class.java)
             .findAllCategs()
@@ -18,8 +21,8 @@ class CategRemoteDataSource {
                 ) {
                     if(response.isSuccessful) {
                         val categories = response.body()
-                        callback.onSucess(categories ?: emptyList())
-                        Log.d("CategRemoteDataSource", "onSuccess")
+                        callback.onSucessCateg(categories ?: emptyList())
+                        Log.d("CategRemoteDataSource", "onSuccessCateg")
                     } else {
                         val error =
                             if (response.errorBody() != null) {

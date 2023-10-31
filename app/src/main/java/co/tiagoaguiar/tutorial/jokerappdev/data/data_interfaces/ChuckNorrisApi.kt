@@ -1,5 +1,6 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data
+package co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces
 
+import co.tiagoaguiar.tutorial.jokerappdev.data.http_singleton.HttpClient
 import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
 import retrofit2.Call
 import retrofit2.http.GET
@@ -18,4 +19,9 @@ interface ChuckNorrisApi {
         apiKey: String = HttpClient.API_KEY
     ) : Call<Joke>
 
+    @GET("jokes/random")
+    fun findDayJoke(
+        @Query("apiKey")
+        apiKey: String = HttpClient.API_KEY
+    ) : Call<Joke>
 }

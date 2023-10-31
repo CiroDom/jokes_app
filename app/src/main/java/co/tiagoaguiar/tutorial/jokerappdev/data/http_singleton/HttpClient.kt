@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data
+package co.tiagoaguiar.tutorial.jokerappdev.data.http_singleton
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

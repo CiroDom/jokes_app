@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data
+package co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces
 
 import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
 

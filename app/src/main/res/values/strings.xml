@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Jokes App</string>
+    <string name="app_name">jokes app</string>
 
-    <string name="menu_home">Início</string>
-    <string name="menu_day_joke">Piada do Dia</string>
-    <string name="menu_about">Sobre</string>
+    <string name="menu_home">home</string>
+    <string name="menu_day_joke">day joke</string>
+    <string name="menu_about">about</string>
 
-    <string name="social">Social</string>
+    <string name="social">social</string>
 </resources>

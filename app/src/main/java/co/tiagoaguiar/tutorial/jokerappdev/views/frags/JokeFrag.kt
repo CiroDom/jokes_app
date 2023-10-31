@@ -1,6 +1,7 @@
 package co.tiagoaguiar.tutorial.jokerappdev.views.frags
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +12,9 @@ import co.tiagoaguiar.tutorial.jokerappdev.R
 import co.tiagoaguiar.tutorial.jokerappdev.databinding.FragJokeBinding
 import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
 import co.tiagoaguiar.tutorial.jokerappdev.presenter.JokePresenter
+import com.squareup.picasso.Picasso
 
 class JokeFrag : Fragment() {
-
 
     private val binding by lazy {
         FragJokeBinding.inflate(layoutInflater)
@@ -43,27 +44,42 @@ class JokeFrag : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val categName = arguments?.getString(CATEG_KEY)!!
+        val fab = binding.fab
 
-        activity?.findViewById<Toolbar>(R.id.toolbar)?.title = categName
+        if (arguments != null) {
+            val categName = arguments?.getString(CATEG_KEY)!!
 
-        progBar.setOnClickListener {
+            activity?.findViewById<Toolbar>(R.id.toolbar)?.title = categName
+
+            fab.setOnClickListener {
+                presenter.findByCateg(categName)
+                Log.i("categJoke", "fab - findcategJoke")
+            }
+
             presenter.findByCateg(categName)
-        }
+            Log.i("categJoke", "normal - findcategJoke")
+        } else {
+            fab.setOnClickListener {
+                presenter.findDayJoke()
+                Log.i("dayJoke", "fab - findDayJoke")
+            }
 
-        presenter.findByCateg(categName)
+            presenter.findDayJoke()
+            Log.i("dayJoke", "normal - findDayJoke")
+        }
     }
 
     fun showJoke(joke: Joke) {
         txtJoke.text = joke.text
 
+        Picasso.get().load(joke.urlIcon).into(imgJoke)
     }
 
     fun showProgBar() {
