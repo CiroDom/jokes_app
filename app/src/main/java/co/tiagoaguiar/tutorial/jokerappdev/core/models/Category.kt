@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.jokerappdev.models
+package co.tiagoaguiar.tutorial.jokerappdev.core.models
 
 data class Category(
     val name: String,

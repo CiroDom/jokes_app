@@ -1,6 +1,6 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces
+package co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces
 
-import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
 
 interface OurCallbacks {
 

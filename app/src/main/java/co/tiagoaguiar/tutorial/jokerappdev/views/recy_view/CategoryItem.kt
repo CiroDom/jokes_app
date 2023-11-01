@@ -3,7 +3,7 @@ package co.tiagoaguiar.tutorial.jokerappdev.views.recy_view
 import android.view.View
 import android.widget.LinearLayout
 import co.tiagoaguiar.tutorial.jokerappdev.R
-import co.tiagoaguiar.tutorial.jokerappdev.models.Category
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Category
 import com.google.android.material.textview.MaterialTextView
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item

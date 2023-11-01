@@ -1,10 +1,10 @@
-package co.tiagoaguiar.tutorial.jokerappdev.presenter
+package co.tiagoaguiar.tutorial.jokerappdev.core.presenter
 
 import android.graphics.Color
-import co.tiagoaguiar.tutorial.jokerappdev.data.remote_data_sources.CategRemoteDataSource
-import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.OurCallbacks
-import co.tiagoaguiar.tutorial.jokerappdev.models.Category
-import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.remote_data_sources.CategRemoteDataSource
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.OurCallbacks
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Category
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
 import co.tiagoaguiar.tutorial.jokerappdev.views.frags.HomeFrag
 
 class HomePresenter(

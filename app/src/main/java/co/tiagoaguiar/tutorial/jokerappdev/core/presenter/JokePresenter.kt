@@ -1,8 +1,8 @@
-package co.tiagoaguiar.tutorial.jokerappdev.presenter
+package co.tiagoaguiar.tutorial.jokerappdev.core.presenter
 
-import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.JokeCallback
-import co.tiagoaguiar.tutorial.jokerappdev.data.remote_data_sources.JokeRemoteDataSource
-import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.JokeCallback
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.remote_data_sources.JokeRemoteDataSource
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
 import co.tiagoaguiar.tutorial.jokerappdev.views.frags.JokeFrag
 
 class JokePresenter(

@@ -10,8 +10,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import co.tiagoaguiar.tutorial.jokerappdev.R
 import co.tiagoaguiar.tutorial.jokerappdev.databinding.FragJokeBinding
-import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
-import co.tiagoaguiar.tutorial.jokerappdev.presenter.JokePresenter
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
+import co.tiagoaguiar.tutorial.jokerappdev.core.presenter.JokePresenter
 import com.squareup.picasso.Picasso
 
 class JokeFrag : Fragment() {
@@ -82,7 +82,7 @@ class JokeFrag : Fragment() {
     fun showJoke(joke: Joke) {
         txtJoke.text = joke.text
 
-        Picasso.get().load(joke.urlIcon).into(imgJoke)
+        Picasso.get().load(joke.iconUrl).into(imgJoke)
     }
 
     fun showProgBar() {

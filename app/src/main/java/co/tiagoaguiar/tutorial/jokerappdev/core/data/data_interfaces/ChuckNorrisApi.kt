@@ -1,7 +1,7 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces
+package co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces
 
-import co.tiagoaguiar.tutorial.jokerappdev.data.http_singleton.HttpClient
-import co.tiagoaguiar.tutorial.jokerappdev.models.Joke
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.http_singleton.HttpClient
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

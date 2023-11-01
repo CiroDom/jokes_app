@@ -1,9 +1,9 @@
-package co.tiagoaguiar.tutorial.jokerappdev.data.remote_data_sources
+package co.tiagoaguiar.tutorial.jokerappdev.core.data.remote_data_sources
 
 import android.util.Log
-import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.ChuckNorrisApi
-import co.tiagoaguiar.tutorial.jokerappdev.data.http_singleton.HttpClient
-import co.tiagoaguiar.tutorial.jokerappdev.data.data_interfaces.OurCallbacks
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.ChuckNorrisApi
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.http_singleton.HttpClient
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.OurCallbacks
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

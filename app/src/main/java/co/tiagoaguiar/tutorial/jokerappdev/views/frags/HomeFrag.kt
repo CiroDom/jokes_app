@@ -11,8 +11,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.tiagoaguiar.tutorial.jokerappdev.R
 import co.tiagoaguiar.tutorial.jokerappdev.databinding.FragHomeBinding
-import co.tiagoaguiar.tutorial.jokerappdev.models.Category
-import co.tiagoaguiar.tutorial.jokerappdev.presenter.HomePresenter
+import co.tiagoaguiar.tutorial.jokerappdev.core.models.Category
+import co.tiagoaguiar.tutorial.jokerappdev.core.presenter.HomePresenter
 import co.tiagoaguiar.tutorial.jokerappdev.views.recy_view.CategoryItem
 import com.xwray.groupie.GroupieAdapter
 
