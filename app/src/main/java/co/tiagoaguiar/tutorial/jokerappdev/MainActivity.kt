@@ -6,6 +6,8 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import co.tiagoaguiar.tutorial.jokerappdev.databinding.ActivityMainBinding
 
@@ -40,11 +42,13 @@ class MainActivity : AppCompatActivity() {
 
     navController = navHostFrag.navController
 
+    setupActionBarWithNavController(navController, appBarConfig)
+
     val navView = binding.navView
     navView.setupWithNavController(navController)
   }
 
   override fun onSupportNavigateUp(): Boolean {
-    return navController.navigateUp() || super.onSupportNavigateUp()
+    return navController.navigateUp(appBarConfig) || super.onSupportNavigateUp()
   }
 }
