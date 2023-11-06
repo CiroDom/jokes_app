@@ -3,7 +3,7 @@ package co.tiagoaguiar.tutorial.jokerappdev.core.data.remote_data_sources
 import android.util.Log
 import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.ChuckNorrisApi
 import co.tiagoaguiar.tutorial.jokerappdev.core.data.http_singleton.HttpClient
-import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.JokeCallback
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.OurCallbacks
 import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
 import retrofit2.Call
 import retrofit2.Callback
@@ -12,7 +12,7 @@ import java.lang.RuntimeException
 
 class JokeRemoteDataSource {
 
-    fun findByCateg(categName: String, callback: JokeCallback) {
+    fun findByCateg(categName: String, callback: OurCallbacks) {
         HttpClient.buildRetrofit()
             .create(ChuckNorrisApi::class.java)
             .findByCateg(categName)
@@ -20,7 +20,7 @@ class JokeRemoteDataSource {
                 override fun onResponse(call: Call<Joke>, response: Response<Joke>) {
                     if(response.isSuccessful) {
                         val joke = response.body()
-                        callback.onSucess(joke ?: throw RuntimeException("Piada não encontrada"))
+                        callback.onSucessRandomJoke(joke ?: throw RuntimeException("Piada não encontrada"))
                         Log.d("JokeRemoteDataSource", "onSuccess")
                     } else {
                         val error =
@@ -46,7 +46,7 @@ class JokeRemoteDataSource {
             })
     }
 
-    fun findDayJoke(callback: JokeCallback) {
+    fun findRandomJoke(callback: OurCallbacks) {
         HttpClient.buildRetrofit()
             .create(ChuckNorrisApi::class.java)
             .findDayJoke()
@@ -54,7 +54,7 @@ class JokeRemoteDataSource {
                 override fun onResponse(call: Call<Joke>, response: Response<Joke>) {
                     if(response.isSuccessful) {
                         val joke = response.body()
-                        callback.onSucess(joke ?: throw RuntimeException("Piada não encontrada"))
+                        callback.onSucessRandomJoke(joke ?: throw RuntimeException("Piada não encontrada"))
                         Log.d("JokeRemoteDataSource", "onSuccess")
                     } else {
                         val error =

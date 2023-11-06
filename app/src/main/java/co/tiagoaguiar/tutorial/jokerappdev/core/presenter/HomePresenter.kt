@@ -30,7 +30,7 @@ class HomePresenter(
         view.showCategs(categories)
     }
 
-    override fun onSucessDayJoke(response: Joke) {
+    override fun onSucessRandomJoke(response: Joke) {
         /** nothing to do here */
     }
 

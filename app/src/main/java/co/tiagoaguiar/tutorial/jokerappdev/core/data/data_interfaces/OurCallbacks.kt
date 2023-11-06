@@ -6,7 +6,7 @@ interface OurCallbacks {
 
     fun onSucessCateg(response: List<String>)
 
-    fun onSucessDayJoke(response: Joke)
+    fun onSucessRandomJoke(response: Joke)
 
     fun onError(response: String)
 

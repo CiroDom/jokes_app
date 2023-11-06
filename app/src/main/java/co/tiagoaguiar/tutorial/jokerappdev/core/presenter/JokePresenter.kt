@@ -1,6 +1,6 @@
 package co.tiagoaguiar.tutorial.jokerappdev.core.presenter
 
-import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.JokeCallback
+import co.tiagoaguiar.tutorial.jokerappdev.core.data.data_interfaces.OurCallbacks
 import co.tiagoaguiar.tutorial.jokerappdev.core.data.remote_data_sources.JokeRemoteDataSource
 import co.tiagoaguiar.tutorial.jokerappdev.core.models.Joke
 import co.tiagoaguiar.tutorial.jokerappdev.views.frags.JokeFrag
@@ -8,9 +8,13 @@ import co.tiagoaguiar.tutorial.jokerappdev.views.frags.JokeFrag
 class JokePresenter(
     private val view: JokeFrag,
     private val dataSource: JokeRemoteDataSource = JokeRemoteDataSource()
-) : JokeCallback {
+) : OurCallbacks {
 
-    override fun onSucess(response: Joke) {
+    override fun onSucessCateg(response: List<String>) {
+        /** Nothing to do here */
+    }
+
+    override fun onSucessRandomJoke(response: Joke) {
         view.showJoke(response)
     }
 
@@ -27,9 +31,9 @@ class JokePresenter(
         dataSource.findByCateg(categName, this)
     }
 
-    fun findDayJoke() {
+    fun findRandomJoke() {
         view.showProgBar()
-        dataSource.findDayJoke(this)
+        dataSource.findRandomJoke(this)
     }
 
 }

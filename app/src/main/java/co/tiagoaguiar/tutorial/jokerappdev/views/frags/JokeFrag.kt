@@ -70,11 +70,11 @@ class JokeFrag : Fragment() {
             activity?.findViewById<Toolbar>(R.id.toolbar)?.title = getString(R.string.random_joke)
 
             fab.setOnClickListener {
-                presenter.findDayJoke()
+                presenter.findRandomJoke()
                 Log.i("dayJoke", "fab - findDayJoke")
             }
 
-            presenter.findDayJoke()
+            presenter.findRandomJoke()
             Log.i("dayJoke", "normal - findDayJoke")
         }
     }
